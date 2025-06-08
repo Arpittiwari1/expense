@@ -32,12 +32,20 @@ function Login() {
         email,
         password
       });
-      const {token , user} = response.data;
-      if(token){
-        localStorage.setItem("token", token);
-        updateUser(user);
-        navigate("/dashboard");
-    } 
+    //   const {token , user} = response.data;
+    //   if(token){
+    //     localStorage.setItem("token", token);
+    //     updateUser(user);
+    //     navigate("/dashboard");
+    // } 
+    const { token, ...userData } = response.data;
+if (token) {
+  localStorage.setItem("token", token);
+  localStorage.setItem("user", JSON.stringify(userData));
+  updateUser(userData);
+  navigate("/dashboard");
+}
+
 
     } catch(error){
       if(error.response && error.response.data.message){
