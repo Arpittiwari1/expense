@@ -26,9 +26,10 @@ const SideMenu = ({ activeMenu }) => {
     <div className='w-64 h-[calc(100vh-61px)] bg-white border-r border-gray-200/50 py-5 sticky top-[61px] z-20'>
      
       <div className='flex flex-col items-center justify-center gap-3 mt-3 mb-7'>
-      {user?.profileImageURL ? (
+      {user?.profileImageURL? (
   <img
-    src={user.profileImageURL}
+{/*     src={user.profileImageURL} */}
+  src="https://images.unsplash.com/photo-1591561582301-7ce6588cc286?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJ1bm55fGVufDB8fDB8fHww"
     alt="profile Image"
     className="w-20 h-20 bg-slate-400 rounded-full object-cover"
   />
