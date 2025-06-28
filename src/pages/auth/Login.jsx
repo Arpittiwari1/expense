@@ -32,21 +32,13 @@ function Login() {
         email,
         password
       });
-    //   const {token , user} = response.data;
-    //   if(token){
-    //     localStorage.setItem("token", token);
-    //     updateUser(user);
-    //     navigate("/dashboard");
-    // } 
-    const { token, ...userData } = response.data;
-if (token) {
-  localStorage.setItem("token", token);
-  localStorage.setItem("user", JSON.stringify(userData));
-  updateUser(userData);
-  navigate("/dashboard");
-}
-
-
+      const { token, user } = response.data;
+      if (token) {
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", JSON.stringify(user));
+        updateUser(user);
+        navigate("/dashboard");
+      }
     } catch(error){
       if(error.response && error.response.data.message){
         setError(error.response.data.message);

@@ -5,9 +5,10 @@ export const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const updateUser = (userData) => {
-    setUser(userData);
-  };
+const updateUser = (userData) => {
+  setUser(userData.user || userData);
+  localStorage.setItem('user', JSON.stringify(userData)); 
+};
 
   const clearUser = () => {
     setUser(null);
