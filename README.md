@@ -51,3 +51,36 @@ To run this project locally, make sure you have the following software installed
 
    ```bash
    git clone https://github.com/Arpittiwari1/expense.git 
+## Contributing
+
+We welcome contributions from everyone! If you’d like to contribute to the project, please follow these steps:
+
+1. **Fork the repository** to your own GitHub account.
+
+2. **Clone the forked repository** to your local machine:
+
+    ```bash
+    git clone https://github.com/yourusername/expense.git
+    ```
+
+3. **Create a new branch** to work on your feature:
+
+    ```bash
+    git checkout -b feature-name
+    ```
+
+4. **Make changes** and commit them:
+
+    ```bash
+    git add .
+    git commit -m 'Added feature: <feature-description>'
+    ```
+
+5. **Push your changes** to your forked repository:
+
+    ```bash
+    git push origin feature-name
+    ```
+
+6. **Open a pull request** to the main repository.
+
